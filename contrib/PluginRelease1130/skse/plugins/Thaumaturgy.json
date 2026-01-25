@@ -1,0 +1,14 @@
+{
+  "DebugLogs":  true,
+  "DisenchantExperienceMults": {
+    "fDisenchantingArmorExpMult": 0.01,
+    "fDisenchantingWeaponExpMult": 0.15
+  },
+  "SoulGemEnchantMults": {
+    "fPettyMult": 1.5,
+    "fLesserMult": 1.25,
+    "fCommonMult": 1.5,
+    "fGreaterMult": 1.75,
+    "fGrandMult": 2.0
+  }
+}

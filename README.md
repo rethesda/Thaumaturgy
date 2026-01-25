@@ -1,9 +1,9 @@
-This is a simple utility plugin for use with Thaumaturgy - An Enchanting Overhaul: https://www.nexusmods.com/skyrimspecialedition/mods/57138  
 
 ## What does it do?  
 
 **Current functionality includes:**  
-`Apply set mult to disenchanting XP` - Can be adjusted in the ini
+`Apply set mult to disenchanting XP` - Can be adjusted in the json
+`Enchanting XP is increased based on the type of soul gem you are enchanting with` - Can be adjusted in the json
 
 ## Requirements
 * [CMake](https://cmake.org/)
@@ -18,11 +18,3 @@ This is a simple utility plugin for use with Thaumaturgy - An Enchanting Overhau
 * Open `x64 Native Tools Command Prompt`
 * Run `cmake`
 * Close the cmd window
-
-## Building
-```
-git clone https://github.com/colinswrath/Thaumaturgy.git
-cd ExamplePlugin-CommonLibSSE
-git submodule update --init --recursive
-cmake -B build -S .
-```
