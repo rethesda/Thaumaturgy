@@ -5,7 +5,7 @@
     "fDisenchantingWeaponExpMult": 0.15
   },
   "SoulGemEnchantMults": {
-    "fPettyMult": 1.5,
+    "fPettyMult": 1.0,
     "fLesserMult": 1.25,
     "fCommonMult": 1.5,
     "fGreaterMult": 1.75,

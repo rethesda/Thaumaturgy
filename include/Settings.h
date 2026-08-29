@@ -11,6 +11,8 @@ public:
     inline static float fGreaterMult;
     inline static float fGrandMult;
 
+    inline static bool bUseSoulGemMults;
+
 	using json = nlohmann::json;
 
 	Settings() = delete;

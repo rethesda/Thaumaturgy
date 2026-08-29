@@ -47,6 +47,8 @@ bool Settings::ParsePreLoadSettings()
             fDisenchantingWeaponExpMult = disXpMults.value("fDisenchantingWeaponExpMult", 0.15f);
         }
 
+        bUseSoulGemMults = false;
+
         if (settingsJson.contains("SoulGemEnchantMults")) {
             auto& soulGemMults          = settingsJson["SoulGemEnchantMults"];
             fPettyMult                  = soulGemMults.value("fPettyMult", 1.0f);
@@ -54,15 +56,17 @@ bool Settings::ParsePreLoadSettings()
             fCommonMult                 = soulGemMults.value("fCommonMult", 1.5f);
             fGreaterMult                = soulGemMults.value("fGreaterMult", 1.75f);
             fGrandMult                  = soulGemMults.value("fGrandMult", 2.0f);
+            
+            logger::info("fDisenchantingArmorExpMult: {}", std::to_string(fDisenchantingArmorExpMult));
+            logger::info("fDisenchantingWeaponExpMult: {}", std::to_string(fDisenchantingWeaponExpMult));
+            logger::info("fEnchantPettyMult: {}", std::to_string(fPettyMult));
+            logger::info("fEnchantLesserMult: ", std::to_string(fLesserMult));
+            logger::info("fEnchantCommonMult: ", std::to_string(fCommonMult));
+            logger::info("fEnchantGreaterMult: ", std::to_string(fGreaterMult));
+            logger::info("fEnchantGrandMult: ", std::to_string(fGrandMult));
+            bUseSoulGemMults = true;
         }
 
-        logger::info("fDisenchantingArmorExpMult: {}", std::to_string(fDisenchantingArmorExpMult));
-        logger::info("fDisenchantingWeaponExpMult: {}", std::to_string(fDisenchantingWeaponExpMult));
-        logger::info("fEnchantPettyMult: {}", std::to_string(fPettyMult));
-        logger::info("fEnchantLesserMult: ", std::to_string(fLesserMult));
-        logger::info("fEnchantCommonMult: ", std::to_string(fCommonMult));
-        logger::info("fEnchantGreaterMult: ", std::to_string(fGreaterMult));
-        logger::info("fEnchantGrandMult: ", std::to_string(fGrandMult));
 
         logger::info("Settings loaded");
         
